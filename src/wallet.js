@@ -4,7 +4,7 @@ require( 'dotenv' ).config();
 export const createWallet = (...values) => {
     sdk.auth( process.env.SECRET_KEY );
     sdk.CreateWallet( {
-        name: values[0],
+        name: `user:${values[0]}`,
         // callbackUrl: 'https://callback.url',
         type: 'DEFAULT',
         notes: 'User Wallet'
