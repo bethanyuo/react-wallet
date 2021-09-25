@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
+import "./styles.css";
 
 const MyTextInput = ( { label, ...props } ) => {
     // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -55,7 +56,9 @@ const MySelect = ( { label, ...props } ) => {
 const SignupForm = () => {
     return (
         <>
-            <h1>Subscribe!</h1>
+            <h1>Signup</h1>
+            <h5>Create your PiñaPay Wallet today!</h5>
+            <br></br>
             <Formik
                 initialValues={{
                     firstName: '',
