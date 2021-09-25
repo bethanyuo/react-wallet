@@ -10,4 +10,4 @@ sdk.CreateWallet({
   notes: 'User Wallet'
 })
   .then(res => console.log(res))
-  .catch(err => console.error(err));
+  .alert(err => console.error(err));
