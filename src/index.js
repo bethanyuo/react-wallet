@@ -116,7 +116,7 @@ const SignupForm = () => {
                         placeholder="jane@formik.com"
                     />
 
-                    <MySelect label="Job Type" name="userType">
+                    <MySelect label="User Type" name="userType">
                         <option value="">Select a user type</option>
                         <option value="merchant">Merchant</option>
                         <option value="buyer">Buyer</option>
