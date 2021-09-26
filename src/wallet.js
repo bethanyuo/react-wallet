@@ -1,7 +1,9 @@
-const sdk = require( 'api' )( '@wyre-hub/v3#6o13y011xktk7auip' );
+//const sdk = require( 'api' )( '@wyre-hub/v3#6o13y011xktk7auip' );
 require( 'dotenv' ).config();
 
 export const createWallet = (...values) => {
+    const sdk = require( 'api' )( '@wyre-hub/v3#6o13y011xktk7auip' );
+
     sdk.auth( process.env.SECRET_KEY );
     sdk.CreateWallet( {
         name: `user:${values[0]}`,
@@ -9,6 +11,8 @@ export const createWallet = (...values) => {
         type: 'DEFAULT',
         notes: 'User Wallet'
     } )
-        .then( res => console.log( res ))
+        .then( res => {
+            console.log('DONE')
+        } )
         .catch( err => console.error( err ) );
 }

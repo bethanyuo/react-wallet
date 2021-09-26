@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import "./styles.css";
+import { createWallet } from './wallet';
 
 const MyTextInput = ( { label, ...props } ) => {
     // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -89,7 +90,9 @@ const SignupForm = () => {
                 } )}
                 onSubmit={( values, { setSubmitting } ) => {
                     setTimeout( () => {
-                        alert( JSON.stringify( values, null, 2 ) );
+                        let result =  createWallet(values);
+                        console.log( JSON.stringify( values, null, 2 ) );
+                        alert(result);
                         setSubmitting( false );
                     }, 400 );
                 }}
